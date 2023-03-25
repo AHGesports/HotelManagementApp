@@ -1,0 +1,31 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.container-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainBlue {
+    color: rgba(2, 136, 199, 1);
+}

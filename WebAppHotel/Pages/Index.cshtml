@@ -1,0 +1,277 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="~/css/site.css" />
+
+<body>
+	<div class="container mt-5  justify-content-center d-flex flex-column " style="height: 100vh; ">
+		
+			
+					
+					<div class="row ">
+					<h1 class="text-center display-2 MainBlue">Welcome to our Hotel</h1>
+
+						<blockquote class="mt-5 mb-4 text-center text-white">
+							"The exceptional service and attention to detail at this hotel made my stay a truly memorable one. I was thoroughly impressed by the luxurious accommodations and impeccable hospitality." - John Doe
+						</blockquote>
+					</div>
+
+					<div class="container mt-5 mb-5 glass2 text-white ">
+						<h2>want to stay at our hotel?</h2>
+						<div class="row">
+							<div class="col-11">
+								<p>browse our website and check out the amazing categories of rooms and services we have, not sure where to start? Go to room search now!</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="justify-content-end d-inline-flex">
+								<button class="btn btn-light round">room search</button>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="container glass2 c">
+						<div class="row">
+							
+							<div class="col-lg-8 d-flex flex-column mb-2">
+								<h2 class="text-start text-white">Standard Room</h2>
+
+								<div class="row align-items-center mt-4">
+									<p class="text-white align-self-center">
+										The standard hotel room is a cozy and comfortable accommodation, designed to meet the basic needs of travelers.
+										The room is furnished with a comfortable bed, a desk, and a chair, providing guests with a functional and comfortable space to relax and work. The en-suite bathroom
+										is equipped with essential amenities and toiletries, ensuring a convenient and hassle-free stay.
+									</p>
+									<div class="col mt-2">
+										<button class="btn btn-outline-light round">location</button>
+										<button class="btn btn-outline-light round">50 m</button>
+										<button class="btn btn-outline-light round">2 beds </button>
+									</div>
+								</div>
+
+								<div class="row mt-auto mb-2">
+									<form method="post" class="d-inline-flex justify-content-end ">
+										<button class="btn btn-light round">To Rooms</button>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-4 d-flex align-items-center justify-content-lg-end justify-content-center">
+								
+									<img class="flex-lg-grow-0 flex-grow-1" style="border-radius: 15px; border-color: white;  border: 3px solid white; max-width: 100%; max-height:400px;" src="https://picsum.photos/250/300" alt="Room 1">
+								
+								
+							</div>
+							
+							
+						</div>
+					</div>
+
+	
+						
+		
+					
+			
+	   
+			
+			
+				
+	</div>
+
+</body>
+
+<style>
+	/* General Styles */
+
+
+
+	
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+		margin-right: 1rem;
+	}
+
+	.hero {
+		background-image: url(https://picsum.photos/1200/800);
+		background-size: cover;
+		background-position: center;
+		height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		text-align: center;
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+
+
+
+		
+
+	
+	   .c {
+  position: relative; /* set position to relative to contain the absolute positioned pseudo-element */
+  z-index: -1; /* set a z-index to the container, so the pseudo-element can be positioned behind it */
+}
+
+.c::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/blue-white-marble-texture-background-73486993.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius:20px;
+  opacity: 0.26;
+  z-index: -1;
+}
+
+	
+		
+
+
+/* Main Styles */
+.card-wrapper {
+	display: flex;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.card-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	flex: 0 0 320px;
+	margin-right: 20px;
+	background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.vertical-box {
+    height: 70vh;
+}
+.limitwidth{
+	max-width: 900px;
+}
+.limitheight{
+	max-height:300px;
+}
+.round{
+	border-radius: 25px;
+}
+
+	
+	.vertical-box-innerbox.glass {
+		background: rgba(255, 255, 255, 0.9);
+	}
+
+		.vertical-box-innerbox.glass:hover {
+			background: rgba(255, 255, 255, 0.95);
+			box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.70), -4px -4px 4px rgba(255, 255, 255, 0.70), 4px 4px 4px rgba(0, 0, 0, 0.70), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.90);
+		}
+
+	.glass2 {
+		background: rgba(2, 136, 199, 0.8);
+		border-radius: 20px;
+		border: none;
+		outline: none;
+		padding: 15px 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease-in-out;
+	}
+
+		.glass2:hover {
+			background: rgba(2, 136, 199, 1);
+			transform: translateY(-5px);
+			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+	.glass1 {
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		border: none;
+		outline: none;
+		padding: 15px 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease-in-out;
+	}
+
+		.glass2:hover {
+			background: rgba(2, 136, 199, 1);
+			transform: translateY(-5px);
+			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		}
+
+	blockquote {
+		border-left: 5px solid #007bff; /* Add a left border with the hotel's brand color */
+		margin: 1rem 0; /* Add some margin to separate the quote from surrounding content */
+		padding: 0 1rem; /* Add some padding to the left and right of the quote */
+		font-size: 1.25rem; /* Increase the font size for emphasis */
+		font-style: italic; /* Make the quote italicized */
+		line-height: 1.5; /* Increase the line height for readability */
+	}
+
+		.glass3 {
+		background: rgba(255, 255, 255, 0.25);
+		border-radius: 25px;
+		border: none;
+		outline: none;
+		padding: 10px 20px;
+		box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25), 0px -2px 2px rgba(255, 255, 255, 0.25), 2px 0px 2px rgba(255, 255, 255, 0.25), -2px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.25);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.glass3:hover {
+		background: rgba(255, 255, 255, 0.42);
+		box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.15), -4px -4px 4px rgba(255, 255, 255, 0.15), 4px 4px 4px rgba(0, 0, 0, 0.15), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.35);
+		transform: translate(0px, -2px);
+	}
+
+	/* Apply glass style to inputs */
+	input.glass3 {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	/* Apply glass style to buttons */
+	button.glass3 {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+		button.glass3:hover {
+			background: rgba(59,113,202, 1);
+		}
+	}
+
+</style>

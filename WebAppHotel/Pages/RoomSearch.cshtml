@@ -1,0 +1,249 @@
+﻿@page
+@model WebAppHotel.Pages.RoomSearchModel
+@{
+    ViewData["Title"] = "Room Search";
+
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+    
+
+        
+           <div class="container">
+                <div class="vertical-box d-flex flex-column justify-content-center">
+                    <div class="d-flex flex-row justify-content-start">
+                        <div class="ms-xxl-5 ps-xxl-5 ms-xl-4 ps-xl-0">
+
+                        <h2 class="display-2 mb-4 ms-xl-5 ps-xl-5">
+                            Choose a Date!
+                        </h2>
+                        </div>
+
+                    </div>
+                    
+                     <div class="d-flex flex-row justify-content-center mb-4">
+                               <div class="flex-grow-1 limitwidth"> @*this div*@
+                                        
+                                        <div class="glass rounded ">
+                                        <form method="post">
+                        
+                                        
+                                        
+                                            <div class="form-group ">
+                                                <label asp-for="@Model.StartDate"></label>
+                                                <input class="glass" asp-for="@Model.StartDate" />
+                                              
+
+                                                
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label asp-for="@Model.EndDate"></label>
+                                                <input class="glass" asp-for="@Model.EndDate" />
+
+                                            </div>
+                                        
+                                        
+                                        
+                                        
+
+                                            <div class="form-group">
+                                                <button type="submit" class="glass mt-2 ms-2 me-2">Search</button>
+                                            </div>
+
+
+                                        </form>
+                                        </div>
+
+                                </div>
+                     </div>
+
+
+
+
+
+
+
+                       
+
+                                @if (Model.AvialableRoomTypes?.Count > 0)
+                                {
+                                   <div class="d-flex flex-row justify-content-center">
+                                        <div class="vertical-box-innerbox glass rounded ms-1 me-1 flex-grow-1 limitwidth">
+                                            <table class="table">
+                                                <thead>
+
+                                                    <tr>
+                                                        <th>Avialable Rooms</th>
+                                                        <th>Price</th>
+                                                        <th></th>
+
+                                                    </tr>
+
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var room in Model.AvialableRoomTypes)
+                                                    {
+                                                        <tr>
+                                                            <td>
+                                                                <strong>@room.Title</strong> <br />
+                                                                @room.Description
+                                                            </td>
+
+                                                            <td>@string.Format("{0:C}", room.Price)</td>
+                                                            <td>
+                                                                <a asp-page="/Booking" asp-route-roomtypeid="@room.Id"
+                                                           asp-route-startdate="@Model.StartDate"
+                                                           asp-route-enddate="@Model.EndDate"> Book Now </a>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                }
+                       
+
+
+
+                 </div>
+            </div>
+
+  
+
+  
+  
+
+
+
+
+
+
+
+<style>
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/roomsearch.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: -1;
+}
+
+    .container-center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+    .vertical-box {
+        height: 70vh;
+        
+    }
+    .vertical-box-innerbox{
+        min-height:15vh;
+    }
+    h2{
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+        color:white;
+    }
+    .form-group{
+        display: flex;
+        justify-content:start;
+    }
+    .form-group label {
+        min-width: 70px; /* adjust as needed */
+        text-align: left;
+        margin-right: 8px;
+        margin-left: 3px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            align-self:center;
+            margin-bottom: 12px;
+            display: block;
+            color: rgba(59,113,202, 0.95);
+            font-size: 16px;
+        }
+    .form-group input{
+        width: 80%;
+        display: block;
+              
+              padding: 12px;
+              border: none;
+              border-radius: 5px;
+              background-color: rgba(135, 206, 250, 0.15);
+              font-size: 18px;
+    }
+    .form-group button{
+        width: 95%;
+              display: block;
+              padding: 12px;
+              border: none;
+              border-radius: 25px;
+              color:white;
+              font-size: 18px;
+              transition: all 0.3s ease;
+              background-color: rgba(59,113,202, 0.85);
+              
+              
+    }
+    
+ 
+
+    /* CSS for glass style inputs and buttons */
+    .glass {
+        background: rgba(255, 255, 255, 0.45);
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25), 0px -2px 2px rgba(255, 255, 255, 0.25), 2px 0px 2px rgba(255, 255, 255, 0.25), -2px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.25);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.15), -4px -4px 4px rgba(255, 255, 255, 0.15), 4px 4px 4px rgba(0, 0, 0, 0.15), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.35);
+            transform: translate(0px, -2px);
+        }
+
+    /* Apply glass style to inputs */
+    input.glass {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Apply glass style to buttons */
+    button.glass {
+        width: 100%;
+        margin-top: 10px;
+    }
+    button.glass:hover{
+            background: rgba(59,113,202, 1);
+        }
+    .vertical-box-innerbox.glass{
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .vertical-box-innerbox.glass:hover {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.70), -4px -4px 4px rgba(255, 255, 255, 0.70), 4px 4px 4px rgba(0, 0, 0, 0.70), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.90);
+    }
+
+    .limitwidth{
+        max-width: 900px;
+    }
+   
+  
+
+</style>
+  

@@ -1,0 +1,115 @@
+﻿@page
+@model WebAppHotel.Pages.BookingModel
+@{
+	ViewData["Title"] = "Booking";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<body>
+    <div class="container-center">
+
+
+
+        
+            <div class="row d-flex justify-content-center align-content-center">
+                       <div class="col">
+
+                           <h1 style="color: white;">One Step Away!</h1>
+                           <p style="color: white;">Not sure yet? <a asp-page="/RoomSearch">Choose another one!</a></p>
+
+                       </div>
+
+            </div>
+            
+
+            <div class="row d-flex justify-content-center align-content-center mt-3">
+                        <div class="col">
+                            <form class="form-group" method="post">
+                                <table class="table-primary mx-auto">
+                                    <thead>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" /></td>
+                                            <td><input type="text" class="form-control" /></td>
+                                            <td>
+                                                <button type="submit" class="btn btn-primary">Book!</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+            </div>
+        
+
+
+
+
+
+
+
+       
+
+        
+    </div>
+    
+    
+
+</body>
+
+<style>
+   
+    body {
+        background-image: url("../images/hotel.jpg");
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .container-center {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+
+    .text-center {
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .table-primary {
+        border: none;
+        opacity: 0.9;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+        form.form-group {
+        
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 30px;
+    }
+    form.form-group input {
+        border-radius: 10px;
+    }
+
+    form.form-group button {
+        border-radius: 10px;
+    }
+    
+</style>
+
