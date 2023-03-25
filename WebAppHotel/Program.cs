@@ -9,7 +9,6 @@ builder.Configuration
 .AddEnvironmentVariables();
 // Add services to the container.
 builder.Services.AddRazorPages();
-
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddTransient<IDatabaseData, SqlData>();
 
