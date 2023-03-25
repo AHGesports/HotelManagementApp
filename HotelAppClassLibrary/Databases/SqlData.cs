@@ -12,7 +12,7 @@ namespace HotelAppClassLibrary.Databases
 	{
 		private readonly string _connectioString;
 		private readonly ISqlDataAccess _db;
-		private const string connectionStringName = "SqlDb";
+		private const string connectionStringName = "SqlHotelDbAzure";
 
 		public SqlData(ISqlDataAccess db)
 		{
