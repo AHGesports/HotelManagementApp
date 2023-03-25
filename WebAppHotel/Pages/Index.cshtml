@@ -8,14 +8,14 @@
 <link rel="stylesheet" href="~/css/site.css" />
 
 <body>
-	<div class="container mt-5  justify-content-center d-flex flex-column " style="height: 100vh; ">
+	<div class="container mt-5  justify-content-center d-flex flex-column ">
 		
 			
 					
 					<div class="row ">
-					<h1 class="text-center display-2 MainBlue">Welcome to our Hotel</h1>
+					<h1 class="text-center display-2 mainblue">Welcome to our Hotel</h1>
 
-						<blockquote class="mt-5 mb-4 text-center text-white">
+						<blockquote class="mt-5 mb-4 text-center mainblue">
 							"The exceptional service and attention to detail at this hotel made my stay a truly memorable one. I was thoroughly impressed by the luxurious accommodations and impeccable hospitality." - John Doe
 						</blockquote>
 					</div>
@@ -85,57 +85,11 @@
 </body>
 
 <style>
-	/* General Styles */
 
-
-
-	
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-	.logo {
-		font-size: 1.5rem;
-		font-weight: 600;
-		letter-spacing: -0.5px;
-		margin-right: 1rem;
-	}
-
-	.hero {
-		background-image: url(https://picsum.photos/1200/800);
-		background-size: cover;
-		background-position: center;
-		height: 60vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #fff;
-		text-align: center;
-		padding: 2rem;
-		margin-bottom: 2rem;
-	}
-	
-
-
-
-		
-
-	
+/* marble bg */
 	   .c {
   position: relative; /* set position to relative to contain the absolute positioned pseudo-element */
-  z-index: -1; /* set a z-index to the container, so the pseudo-element can be positioned behind it */
+  z-index: 0; /* set a z-index to the container, so the pseudo-element can be positioned behind it */
 }
 
 .c::before {
@@ -158,46 +112,33 @@
 
 
 /* Main Styles */
-.card-wrapper {
-	display: flex;
-	overflow-x: auto;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.card-wrapper::-webkit-scrollbar {
-	display: none;
-}
-
-.card {
-	flex: 0 0 320px;
-	margin-right: 20px;
-	background-color: #fff;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-}
-
-.vertical-box {
-    height: 70vh;
-}
-.limitwidth{
-	max-width: 900px;
-}
-.limitheight{
-	max-height:300px;
-}
+blockquote {
+		border-left: 5px solid #007bff; /* Add a left border with the hotel's brand color */
+		margin: 1rem 0; /* Add some margin to separate the quote from surrounding content */
+		padding: 0 1rem; /* Add some padding to the left and right of the quote */
+		font-size: 1.25rem; /* Increase the font size for emphasis */
+		font-style: italic; /* Make the quote italicized */
+		line-height: 1.5; /* Increase the line height for readability */
+	}
+/*button default roundness*/
 .round{
 	border-radius: 25px;
 }
 
-	
-	.vertical-box-innerbox.glass {
-		background: rgba(255, 255, 255, 0.9);
+	.glass1 {
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		border: none;
+		outline: none;
+		padding: 15px 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease-in-out;
 	}
 
-		.vertical-box-innerbox.glass:hover {
-			background: rgba(255, 255, 255, 0.95);
-			box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.70), -4px -4px 4px rgba(255, 255, 255, 0.70), 4px 4px 4px rgba(0, 0, 0, 0.70), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.90);
+		.glass1:hover {
+			background: rgba(2, 136, 199, 1);
+			transform: translateY(-5px);
+			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
 		}
 
 	.glass2 {
@@ -214,32 +155,8 @@
 			background: rgba(2, 136, 199, 1);
 			transform: translateY(-5px);
 			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-}
-
-	.glass1 {
-		background: rgba(255, 255, 255, 0.95);
-		border-radius: 20px;
-		border: none;
-		outline: none;
-		padding: 15px 25px;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-		transition: all 0.3s ease-in-out;
-	}
-
-		.glass2:hover {
-			background: rgba(2, 136, 199, 1);
-			transform: translateY(-5px);
-			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
 		}
-
-	blockquote {
-		border-left: 5px solid #007bff; /* Add a left border with the hotel's brand color */
-		margin: 1rem 0; /* Add some margin to separate the quote from surrounding content */
-		padding: 0 1rem; /* Add some padding to the left and right of the quote */
-		font-size: 1.25rem; /* Increase the font size for emphasis */
-		font-style: italic; /* Make the quote italicized */
-		line-height: 1.5; /* Increase the line height for readability */
-	}
+	
 
 		.glass3 {
 		background: rgba(255, 255, 255, 0.25);
