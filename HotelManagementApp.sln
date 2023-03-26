@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelAppClassLibrary", "Hot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppHotel", "WebAppHotel\WebAppHotel.csproj", "{9C63D185-D8D3-4F64-9E24-626EA81CFF9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUI", "WpfUI\WpfUI.csproj", "{F74571F2-640C-42C0-A087-94256DE07782}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Desktop", "Hotel.Desktop\Hotel.Desktop.csproj", "{46063117-1882-4228-9B9A-E361E75E4150}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{9C63D185-D8D3-4F64-9E24-626EA81CFF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C63D185-D8D3-4F64-9E24-626EA81CFF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C63D185-D8D3-4F64-9E24-626EA81CFF9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F74571F2-640C-42C0-A087-94256DE07782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F74571F2-640C-42C0-A087-94256DE07782}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F74571F2-640C-42C0-A087-94256DE07782}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F74571F2-640C-42C0-A087-94256DE07782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46063117-1882-4228-9B9A-E361E75E4150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46063117-1882-4228-9B9A-E361E75E4150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46063117-1882-4228-9B9A-E361E75E4150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46063117-1882-4228-9B9A-E361E75E4150}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

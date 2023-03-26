@@ -1,6 +1,5 @@
 ﻿using HotelAppClassLibrary.Databases;
 using HotelAppClassLibrary.Models;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,28 +14,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
-namespace WpfUI
+
+namespace Hotel.Desktop
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		
-		
-		
-	
-        public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        private readonly IDatabaseData _db;
+        public MainWindow(IDatabaseData db)
         {
             InitializeComponent();
-        
-
-        }
-        private void LastNameButton_Click(object sender, RoutedEventArgs e)
-        {
-          
-
+            _db = db;
+            var bookings = _db.SearchForBookings("B");
+            
         }
     }
 }

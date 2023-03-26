@@ -8,6 +8,6 @@ namespace HotelAppClassLibrary.Databases
 		void CheckIn(string lastName, string roomNumber);
 		void CheckOut(string lastName, string roomNumber);
 		List<RoomTypeModel> GetAvialableRoomTypes(DateTime startDate, DateTime endDate);
-		List<BookingModel> SearchForBookings(string lastName);
+		List<FullBookingModel> SearchForBookings(string lastName);
 	}
 }

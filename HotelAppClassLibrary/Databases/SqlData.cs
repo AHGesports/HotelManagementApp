@@ -10,7 +10,7 @@ namespace HotelAppClassLibrary.Databases
 {
 	public class SqlData : IDatabaseData
 	{
-		private readonly string _connectioString;
+		
 		private readonly ISqlDataAccess _db;
 		private const string connectionStringName = "SqlHotelDbAzure";
 
@@ -58,9 +58,9 @@ namespace HotelAppClassLibrary.Databases
 		}
 
 
-		public List<BookingModel> SearchForBookings(string lastName)
+		public List<FullBookingModel> SearchForBookings(string lastName)
 		{
-			return _db.LoadData<BookingModel, dynamic>("dbo.spBookings_SearchByName",
+			return _db.LoadData<FullBookingModel, dynamic>("dbo.spBookings_SearchByName",
 				new { lastName },
 				connectionStringName,
 				true);

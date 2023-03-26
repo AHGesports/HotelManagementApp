@@ -4,24 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
-        mc:Ignorable="d"
+        
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+           
 
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0">adsdsfdsfsd</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="1">adsdsfdsfsd</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="2">adsdsfdsfsd</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="28" Text="Search for Guest" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <TextBox MinWidth="200" Margin="5" x:Name="LastNameText">
+                
+            </TextBox>
+            <Button Margin="1 5 5 5" Padding="5" x:Name="LastNameButton" Click="LastNameButton_Click"> Click me</Button>
+        </StackPanel>
+
 
 
 

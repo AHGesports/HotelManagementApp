@@ -27,8 +27,6 @@ namespace WpfUI
 			services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 			services.AddTransient<IDatabaseData, SqlData>();
 			services.AddTransient<MainWindow>();
-
-			
 			var builder = new ConfigurationBuilder();
 			builder
 				.SetBasePath(Directory.GetCurrentDirectory())
@@ -41,8 +39,12 @@ namespace WpfUI
 			IConfiguration config = builder.Build();
 			services.AddSingleton(config);
 			var serviceProvider = services.BuildServiceProvider();
-			var mainWindow = serviceProvider.GetService<MainWindow>();
-			mainWindow.Show();
+			var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
+            mainWindow.Show();
+
+            
+
+           
 
 
 			
