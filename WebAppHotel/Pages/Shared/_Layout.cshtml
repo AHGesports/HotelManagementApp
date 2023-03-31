@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebAppHotel</title>
+    <title style="color:white;">@ViewData["Title"] - WebAppHotel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebAppHotel.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 glass21 c1 " style="border-radius: 0px;">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">WebAppHotel</a>
+                <a class="me-5" href="#">
+                    <img src="/AH_white2.png" alt="logo image" style="transform:scale(1)">
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,14 +23,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class=" nav-link text-white" asp-area="" asp-page="/RoomSearch">Rooms</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link text-dark" asp-area="" asp-page="/RoomSearch">RoomSearch</a>
+                            <a class=" nav-link text-white" asp-area="" asp-page="/RoomSearch">Booking</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -38,17 +42,53 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - WebAppHotel - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+
+<style>
+	   .c1 {
+  position: relative; /* set position to relative to contain the absolute positioned pseudo-element */
+  z-index: 0; /* set a z-index to the container, so the pseudo-element can be positioned behind it */
+}
+
+.c1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/blue-white-marble-texture-background-73486993.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius:20px;
+  opacity: 0.04;
+  z-index: -1;
+}
+
+	.glass21 {
+		background: rgba(2, 136, 199, 0.4);
+		border-radius: 20px;
+		border: none;
+		outline: none;
+		padding: 15px 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(255, 255, 255, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease-in-out;
+	}
+
+		.glass21:hover {
+			background: rgba(2, 136, 199, 1);
+			transform: translateY(-5px);
+			box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+		}
+	
+</style>
+
+
+
 </html>

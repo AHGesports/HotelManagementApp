@@ -29,8 +29,17 @@ namespace Hotel.Desktop
         {
             InitializeComponent();
             _db = db;
-            var bookings = _db.SearchForBookings("B");
             
+        }
+
+        private void LastNameButton_Click(object sender, RoutedEventArgs e)
+        {
+
+           List<FullBookingModel> bookings = _db.SearchForBookings(LastNameBox.Text);        
+
+           BookingsList.ItemsSource = bookings;
+                
+
         }
     }
 }
