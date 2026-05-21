@@ -2,12 +2,13 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-<script>
-    const roomContainer = document.querySelector('#room-container');
-    const nextRoomButton = document.querySelector('#next-room');
+const roomContainer = document.querySelector('#room-container');
+const nextRoomButton = document.querySelector('#next-room');
+
+if (roomContainer && nextRoomButton) {
     const roomWidth = roomContainer.offsetWidth;
 
-  nextRoomButton.addEventListener('click', () => {
+    nextRoomButton.addEventListener('click', () => {
         roomContainer.scrollLeft += roomWidth;
-  });
-</script>
+    });
+}

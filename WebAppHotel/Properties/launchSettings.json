@@ -12,20 +12,16 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7108;http://localhost:5223;https://hotelah.azurewebsites.net",
+      "applicationUrl": "https://localhost:7108;http://localhost:5223",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "VaultUri": "https://webapphotelvault.vault.azure.net/",
-        "AZURE_USERNAME": "arshia.hemati@gmail.com"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "VaultUri": "https://webapphotelvault.vault.azure.net/",
-        "AZURE_USERNAME": "arshia.hemati@gmail.com"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }
